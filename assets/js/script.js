@@ -52,7 +52,15 @@ $(function($){
         appendDots: $('.slider_dots'),
         infinite: true,
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        responsive: [
+            {breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     });
 
     // NEWS update Slide Initialization
@@ -65,7 +73,19 @@ $(function($){
         dots: false,
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
     });
     
 })

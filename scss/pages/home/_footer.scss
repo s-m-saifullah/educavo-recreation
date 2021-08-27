@@ -5,8 +5,16 @@
   padding: 200px 0 100px 0;
   margin-top: -100px;
 
+  @include media-breakpoint-down(lg) {
+    margin-top: 0;
+  }
+
   .col-lg-3:last-of-type {
     padding-left: 0;
+
+    @include media-breakpoint-down(lg) {
+      padding-left: 24px;
+    }
   }
 
   &-col-1 {
@@ -112,6 +120,7 @@
   &-col-4 {
     .footer_recent {
       padding-left: 0;
+
       li {
         margin-bottom: 20px;
 

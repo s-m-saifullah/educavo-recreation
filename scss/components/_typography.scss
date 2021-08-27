@@ -45,6 +45,10 @@ dl {
   color: $primary;
   text-align: center;
   text-transform: uppercase;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
 }
 .section_heading {
   font-family: "Nunito", sans-serif;
@@ -54,4 +58,12 @@ dl {
   color: $secondary;
   text-align: center;
   text-transform: capitalize;
+
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 26px;
+  }
 }

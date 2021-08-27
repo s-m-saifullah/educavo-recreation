@@ -11404,6 +11404,11 @@ dl {
   text-align: center;
   text-transform: uppercase;
 }
+@media (max-width: 575.98px) {
+  .section_subheading {
+    font-size: 14px;
+  }
+}
 
 .section_heading {
   font-family: "Nunito", sans-serif;
@@ -11413,6 +11418,16 @@ dl {
   color: #171f32;
   text-align: center;
   text-transform: capitalize;
+}
+@media (max-width: 767.98px) {
+  .section_heading {
+    font-size: 32px;
+  }
+}
+@media (max-width: 575.98px) {
+  .section_heading {
+    font-size: 26px;
+  }
 }
 
 .header {
@@ -12160,20 +12175,6 @@ dl {
 .news_update .blogs .slick-slide .single-blog--img img {
   transition: 0.3s;
 }
-.news_update .blogs .slick-slide .single-blog--img .price-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-.news_update .blogs .slick-slide .single-blog--img .price-button button {
-  padding: 5px 15px;
-  font-size: 15px;
-  font-weight: 500;
-  border: none;
-  border-radius: 5px;
-  background-color: #ff5421;
-  color: #fff;
-}
 .news_update .blogs .slick-slide .single-blog--details {
   padding: 30px;
   padding-bottom: 40px;
@@ -12183,7 +12184,15 @@ dl {
   color: #505050;
   font-size: 15px;
 }
-.news_update .blogs .slick-slide .single-blog--details .blog_meta i {
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .news_update .blogs .slick-slide .single-blog--details .blog_meta .col-4,
+.news_update .blogs .slick-slide .single-blog--details .blog_meta .col-8 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.news_update .blogs .slick-slide .single-blog--details .blog_meta .col-4 i,
+.news_update .blogs .slick-slide .single-blog--details .blog_meta .col-8 i {
   color: #ff5421;
   font-size: 14px;
   margin-right: 5px;
@@ -12242,20 +12251,51 @@ dl {
 .subscription {
   transform: translateY(1%);
 }
+@media (max-width: 991.98px) {
+  .subscription {
+    transform: translateY(0);
+    margin-bottom: 50px;
+  }
+}
 .subscription-content {
   background-color: #171f32;
   padding: 65px 68px;
   border-radius: 5px;
+}
+@media (max-width: 575.98px) {
+  .subscription-content {
+    padding: 50px 30px;
+  }
 }
 .subscription-content--text img {
   width: 50px;
   vertical-align: bottom;
   margin-right: 10px;
 }
+@media (max-width: 575.98px) {
+  .subscription-content--text img {
+    vertical-align: middle;
+  }
+}
 .subscription-content--text h3 {
   display: inline-block;
   font-weight: 700;
   font-size: 36px;
+}
+@media (max-width: 575.98px) {
+  .subscription-content--text h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .subscription-content--text h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .subscription-content--text h3 {
+    font-size: 35px;
+  }
 }
 @media (max-width: 991.98px) {
   .subscription-content--text {
@@ -12289,8 +12329,18 @@ dl {
   padding: 200px 0 100px 0;
   margin-top: -100px;
 }
+@media (max-width: 991.98px) {
+  .footer {
+    margin-top: 0;
+  }
+}
 .footer .col-lg-3:last-of-type {
   padding-left: 0;
+}
+@media (max-width: 991.98px) {
+  .footer .col-lg-3:last-of-type {
+    padding-left: 24px;
+  }
 }
 .footer-col-1 .footer_logo img {
   max-width: 190px;
@@ -12423,7 +12473,7 @@ dl {
 }
 
 .footer_bottom {
-  padding: 45px 0;
+  padding: 40px 0;
   background-color: #151515;
   border-top: 1px solid #495057;
   border-width: 80%;
@@ -12434,6 +12484,45 @@ dl {
 }
 .footer_bottom p a:hover {
   color: #ff5421;
+}
+@media (max-width: 991.98px) {
+  .footer_bottom p {
+    margin-bottom: 10px;
+  }
+}
+.footer_bottom .footer_menu {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.footer_bottom .footer_menu li {
+  margin-right: 40px;
+  position: relative;
+}
+.footer_bottom .footer_menu li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ff5421;
+  left: -23px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.footer_bottom .footer_menu li a {
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.footer_bottom .footer_menu li a:hover {
+  color: #ff5421;
+}
+@media (max-width: 991.98px) {
+  .footer_bottom .footer_menu {
+    justify-content: start;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

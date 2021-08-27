@@ -24,21 +24,6 @@
           img {
             transition: 0.3s;
           }
-
-          .price-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            button {
-              padding: 5px 15px;
-              font-size: 15px;
-              font-weight: 500;
-              border: none;
-              border-radius: 5px;
-              background-color: $primary;
-              color: $white;
-            }
-          }
         }
 
         &--details {
@@ -50,10 +35,17 @@
             color: $text-color-light;
             font-size: 15px;
 
-            i {
-              color: $primary;
-              font-size: 14px;
-              margin-right: 5px;
+            .col-4,
+            .col-8 {
+              @include media-breakpoint-only(lg) {
+                padding-left: 0;
+                padding-right: 0;
+              }
+              i {
+                color: $primary;
+                font-size: 14px;
+                margin-right: 5px;
+              }
             }
           }
 
