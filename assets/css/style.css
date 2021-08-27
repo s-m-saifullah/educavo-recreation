@@ -12288,7 +12288,6 @@ dl {
   background-color: #151515;
   padding: 200px 0 100px 0;
   margin-top: -100px;
-  position: relative;
 }
 .footer .col-lg-3:last-of-type {
   padding-left: 0;
@@ -12426,6 +12425,15 @@ dl {
 .footer_bottom {
   padding: 45px 0;
   background-color: #151515;
+  border-top: 1px solid #495057;
+  border-width: 80%;
+}
+.footer_bottom p a {
+  color: #fff;
+  transition: 0.3s;
+}
+.footer_bottom p a:hover {
+  color: #ff5421;
 }
 
 /*# sourceMappingURL=style.css.map */

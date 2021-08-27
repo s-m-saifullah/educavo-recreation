@@ -1,4 +1,20 @@
+@use '../../custom' as *;
+
 .footer_bottom {
   padding: 45px 0;
   background-color: #151515;
+
+  border-top: 1px solid $gray-700;
+  border-width: 80%;
+
+  p {
+    a {
+      color: $white;
+      transition: 0.3s;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
 }
