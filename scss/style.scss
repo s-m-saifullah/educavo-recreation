@@ -1,0 +1,24 @@
+//Importing Custom SASS
+@use './custom';
+
+//Importing Componets
+
+@use './components/animations';
+@use './components/buttons';
+@use './components/mixins';
+@use './components/typography';
+
+//Importing Home Page Sections
+
+@use './pages/home/header';
+@use './pages/home/offcanvas_menu';
+@use './pages/home/banner';
+@use './pages/home/categories';
+@use './pages/home/courses';
+@use './pages/home/cta';
+@use './pages/home/faq';
+@use './pages/home/testimonials';
+@use './pages/home/news';
+@use './pages/home/subscription';
+@use './pages/home/footer';
+@use './pages/home/footer-bottom';

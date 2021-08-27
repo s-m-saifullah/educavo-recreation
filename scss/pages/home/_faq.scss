@@ -1,0 +1,108 @@
+@use '../../custom' as *;
+@use '../../components/typography' as *;
+@use '../../components/mixins' as *;
+@use '../../components/animations' as *;
+
+.faq {
+  padding: 100px 0;
+
+  &_left {
+    background-color: $light_bg_color;
+    padding: 70px 50px;
+
+    h3 {
+      font-weight: 700;
+      font-size: 36;
+      line-height: 46px;
+      color: $text-color_2;
+      margin-bottom: 45px;
+    }
+
+    .accordion-item {
+      margin-bottom: 30px;
+      border: none;
+      .accordion-button.collapsed {
+        background-color: $white;
+        color: $text-color_2;
+        box-shadow: none;
+        font-family: "Rubik", sans-serif;
+        font-weight: 600;
+
+        &::before {
+          flex-shrink: 0;
+          content: "";
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-right: 10px;
+          background-size: 1.25rem;
+          background-image: escape-svg($accordion-button-icon);
+          background-repeat: no-repeat;
+        }
+      }
+
+      .accordion-button {
+        background-color: $primary;
+        color: $white;
+        box-shadow: none;
+        font-family: "Rubik", sans-serif;
+        font-weight: 600;
+        line-height: 40px;
+
+        &::after {
+          display: none;
+        }
+
+        &::before {
+          flex-shrink: 0;
+          content: "";
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-right: 10px;
+          background-size: 1.25rem;
+          background-image: escape-svg($accordion-button-active-icon);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &_right {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &_play-btn {
+      width: 70px;
+      height: 70px;
+      background-color: $white;
+      border-radius: 50%;
+      text-align: center;
+      cursor: pointer;
+      z-index: 1;
+
+      @include absoluteCenter;
+
+      i {
+        color: $primary;
+        line-height: 70px;
+        font-size: 28px;
+      }
+
+      &:hover {
+        &::after {
+          content: "";
+          width: 70px;
+          height: 70px;
+          background-color: $white;
+          position: absolute;
+          border-radius: 50%;
+          left: 0;
+          top: 0;
+          z-index: -1;
+          animation: fadeOut 1s ease-in-out infinite;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "educavo",
+  "version": "1.0.0",
+  "description": "Recreating Educavo template from themeforest",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:./assets/css/",
+    "autoprefix": "postcss assets/css/style.css --replace --use autoprefixer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaquille19/educavo-recreation.git"
+  },
+  "author": "Saifullah Shaquille",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaquille19/educavo-recreation/issues"
+  },
+  "homepage": "https://github.com/shaquille19/educavo-recreation#readme",
+  "devDependencies": {
+    "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "autoprefixer": "^10.3.1",
+    "bootstrap": "^5.1.0",
+    "glightbox": "^3.0.9",
+    "jquery": "^3.6.0",
+    "postcss-cli": "^8.3.1",
+    "slick-carousel": "^1.8.1"
+  }
+}

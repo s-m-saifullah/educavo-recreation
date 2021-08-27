@@ -1,0 +1,119 @@
+@use '../../custom' as *;
+@use '../../components/mixins' as *;
+@use '../../components/typography' as *;
+@use '../../components/animations' as *;
+
+.news_update {
+  padding: 95px 0;
+
+  .blogs {
+    margin-top: 30px;
+    overflow: hidden;
+
+    .slick-slide {
+      margin: 0 15px;
+      .single-blog {
+        border-radius: 5px;
+        margin-bottom: 30px;
+        transition: 0.3s;
+
+        &--img {
+          position: relative;
+          overflow: hidden;
+
+          img {
+            transition: 0.3s;
+          }
+
+          .price-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            button {
+              padding: 5px 15px;
+              font-size: 15px;
+              font-weight: 500;
+              border: none;
+              border-radius: 5px;
+              background-color: $primary;
+              color: $white;
+            }
+          }
+        }
+
+        &--details {
+          padding: 30px;
+          padding-bottom: 40px;
+          background-color: $white;
+
+          .blog_meta {
+            color: $text-color-light;
+            font-size: 15px;
+
+            i {
+              color: $primary;
+              font-size: 14px;
+              margin-right: 5px;
+            }
+          }
+
+          hr {
+            color: $gray-500;
+          }
+
+          h4 {
+            color: $text-color;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 30px;
+            margin: 20px 0;
+            transition: 0.3s;
+
+            @include media-breakpoint-down(md) {
+              font-size: 18px;
+            }
+
+            &:hover {
+              color: $primary;
+            }
+          }
+
+          .blog_info {
+            margin-top: 25px;
+            i {
+              font-size: 14px;
+              color: $primary;
+            }
+            span {
+              font-size: 14px;
+              color: #363636;
+            }
+
+            a {
+              color: #363636;
+              font-size: 15px;
+              transition: 0.3s;
+              i {
+                color: #363636;
+                font-size: 16px;
+                transition: 0.3s;
+              }
+
+              &:hover {
+                color: $primary;
+
+                i {
+                  color: $primary;
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          @include moveUp;
+        }
+      }
+    }
+  }
+}

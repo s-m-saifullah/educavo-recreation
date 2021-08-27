@@ -1,0 +1,54 @@
+@use '../../custom' as *;
+
+.subscription {
+  transform: translateY(1%);
+
+  &-content {
+    background-color: $secondary;
+    padding: 65px 68px;
+    border-radius: 5px;
+
+    &--text {
+      img {
+        width: 50px;
+        vertical-align: bottom;
+        margin-right: 10px;
+      }
+
+      h3 {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 36px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &--form {
+      position: relative;
+
+      input {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 17px 30px;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        background-color: $primary;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        color: $white;
+        font-size: 15px;
+        padding: 19px 40px;
+      }
+    }
+  }
+}

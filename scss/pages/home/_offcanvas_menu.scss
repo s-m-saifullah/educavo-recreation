@@ -1,0 +1,119 @@
+@use '../../custom' as *;
+@use '../../components/mixins' as *;
+@use '../../components/typography' as *;
+@use '../../components/animations' as *;
+
+.offcanvas-trigger {
+  margin-left: 7px;
+  i {
+    font-size: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.offcanvas-end {
+  width: 500px;
+  overflow-y: auto;
+
+  .offcanvas-close {
+    margin-top: 20px;
+    border: none;
+    background-color: $primary;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+
+    i {
+      line-height: 40px;
+      font-size: 20px;
+      color: $white;
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+    }
+    &:hover {
+      i {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+      }
+    }
+  }
+
+  .offcanvas-content {
+    padding: 35px 50px;
+
+    img {
+      width: 210px;
+      display: block;
+    }
+
+    p {
+      padding: 15px 0;
+      font-size: 15px;
+      line-height: 27px;
+      color: $text-color-light;
+    }
+
+    .offcanvas_gallery {
+      .col-4 {
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-bottom: 16px;
+        overflow: hidden;
+
+        img {
+          max-width: 100%;
+          transition: 0.3s;
+          -webkit-transition: 0.3s;
+
+          &:hover {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .offcanvas_map {
+      margin: 20px 0;
+      img {
+        width: 100%;
+      }
+    }
+
+    .offcanvas_social {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .social_item {
+        margin: 0 10px;
+        i {
+          font-size: 18px;
+          color: #111111;
+          transition: 0.3s;
+          -webkit-transition: 0.3s;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mfp-bg {
+  z-index: 1050;
+}
+
+.mfp-wrap {
+  z-index: 1055;
+}

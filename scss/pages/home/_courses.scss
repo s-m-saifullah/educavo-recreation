@@ -1,0 +1,100 @@
+@use '../../custom' as *;
+@use '../../components/mixins' as *;
+@use '../../components/typography' as *;
+
+.home_courses {
+  padding: 95px 0;
+  background-color: #f9f8f8;
+
+  .courses {
+    margin-top: 30px;
+
+    .single-course {
+      border-radius: 5px;
+      margin-bottom: 30px;
+      overflow: hidden;
+
+      &--img {
+        position: relative;
+        overflow: hidden;
+
+        img {
+          transition: 0.3s;
+        }
+
+        .price-button {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          button {
+            padding: 5px 15px;
+            font-size: 15px;
+            font-weight: 500;
+            border: none;
+            border-radius: 5px;
+            background-color: $primary;
+            color: $white;
+          }
+        }
+      }
+
+      &--details {
+        padding: 30px;
+        padding-bottom: 40px;
+        background-color: $white;
+
+        .course_rating {
+          i {
+            color: $rating-color;
+            font-size: 15px;
+          }
+          span {
+            font-size: 15px;
+            color: $text-color-light;
+          }
+        }
+
+        hr {
+          color: $gray-500;
+        }
+
+        h4 {
+          color: $text-color;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 30px;
+          margin: 20px 0;
+          transition: 0.3s;
+
+          @include media-breakpoint-down(md) {
+            font-size: 18px;
+          }
+
+          &:hover {
+            color: $primary;
+          }
+        }
+
+        .course_info {
+          margin-top: 25px;
+          i {
+            font-size: 14px;
+            color: $primary;
+          }
+          span {
+            font-size: 14px;
+            color: #363636;
+          }
+        }
+      }
+
+      &:hover {
+        .single-course--img {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

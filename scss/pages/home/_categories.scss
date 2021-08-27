@@ -1,0 +1,76 @@
+@use '../../custom' as *;
+@use '../../components/buttons' as *;
+@use '../../components/typography' as *;
+@use '../../components/mixins' as *;
+
+.home_categories {
+  padding: 95px 0;
+  text-align: center;
+
+  .categories {
+    margin: 30px 0;
+    &-content {
+      overflow: hidden;
+      border-radius: 5px;
+      position: relative;
+      margin-bottom: 24px;
+      transition: 0.3s;
+
+      .category-overlay {
+        padding: 0 25px;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        .col-3 {
+          img {
+            width: 42px;
+          }
+        }
+        .col-9 {
+          padding-left: 0;
+          .categories-content--description {
+            color: $white;
+            a {
+              h4 {
+                color: $white;
+                font-size: 22px;
+                font-weight: 700;
+                transition: 0.3s;
+                &:hover {
+                  color: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.7987394787016369) 0%,
+          rgba(0, 0, 0, 0.6) 20%,
+          rgba(0, 0, 0, 0.3) 40%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        z-index: 0;
+      }
+      &:hover {
+        @include moveUp;
+      }
+    }
+  }
+  button {
+    @include buttons;
+    display: inlin-block;
+  }
+}
