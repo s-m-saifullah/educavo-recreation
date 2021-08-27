@@ -7,8 +7,11 @@
   padding: 100px 0;
 
   &_left {
-    background-color: $light_bg_color;
     padding: 70px 50px;
+    background-color: $light_bg_color;
+    @include media-breakpoint-down(sm) {
+      padding: 30px 15px;
+    }
 
     h3 {
       font-weight: 700;
@@ -70,7 +73,12 @@
     height: 100%;
     background-size: cover;
     background-position: center;
+    min-height: 615px;
     position: relative;
+
+    @include media-breakpoint-down(lg) {
+      min-height: 570px;
+    }
 
     &_play-btn {
       width: 70px;
