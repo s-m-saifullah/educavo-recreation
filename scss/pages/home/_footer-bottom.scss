@@ -23,7 +23,7 @@
 
   .footer_menu {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 0;
     padding-left: 0;
 
@@ -55,7 +55,7 @@
     }
 
     @include media-breakpoint-down(lg) {
-      justify-content: start;
+      justify-content: flex-start;
     }
   }
 }

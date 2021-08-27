@@ -12492,7 +12492,7 @@ dl {
 }
 .footer_bottom .footer_menu {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-bottom: 0;
   padding-left: 0;
 }
@@ -12521,7 +12521,7 @@ dl {
 }
 @media (max-width: 991.98px) {
   .footer_bottom .footer_menu {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 
