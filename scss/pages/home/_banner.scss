@@ -30,6 +30,10 @@
     &:hover {
       background-color: darken($primary, 10%);
     }
+
+    @include media-breakpoint-down(lg) {
+      display: none !important;
+    }
   }
 
   .prev_btn {
@@ -46,21 +50,57 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @include media-breakpoint-down(lg) {
+      height: 675px;
+    }
+
     &--content {
       padding: 250px 200px;
+
+      @include media-breakpoint-down(lg) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
 
       p {
         color: $primary;
         font-weight: 500;
         font-size: 22px;
+        margin-bottom: 20px;
         text-transform: uppercase;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 22px;
+        }
+
+        @include media-breakpoint-down(md) {
+          font-size: 20px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          font-size: 18px;
+        }
       }
+
       h1 {
         color: $white;
         font-family: "Nunito", sans-serif;
         font-size: 70px;
         font-weight: 700;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 60px;
+        }
+
+        @include media-breakpoint-down(md) {
+          font-size: 48px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          font-size: 35px;
+        }
       }
+
       button {
         @include buttons;
         text-align: center;
@@ -91,8 +131,10 @@
     left: 0;
     right: 0;
     bottom: -250px;
+
     .feature {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       background-color: $secondary;
       transition: 0.3s;
@@ -102,6 +144,15 @@
       &-icon {
         width: 25%;
 
+        @include media-breakpoint-down(lg) {
+          width: 15%;
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+
         img {
           width: 50px;
           margin: 0 auto;
@@ -110,15 +161,48 @@
 
       &-text {
         width: 75%;
+
+        @include media-breakpoint-down(lg) {
+          width: 85%;
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+
         h3 {
           font-size: 22px;
           font-weight: 700;
+
+          @include media-breakpoint-only(lg) {
+            font-size: 20px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+
+          @include media-breakpoint-only(lg) {
+            font-size: 15px;
+          }
         }
       }
 
       &:hover {
         @include moveUp;
       }
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 40px;
+      }
+
+      @include media-breakpoint-only(lg) {
+        min-height: 145px;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      position: static;
     }
   }
 }
