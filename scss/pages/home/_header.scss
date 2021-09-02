@@ -27,6 +27,7 @@
     .navbar-nav {
       @include media-breakpoint-down(lg) {
         background-color: $white;
+        margin-top: 20px;
       }
 
       .nav-item {
@@ -113,10 +114,24 @@
           }
 
           .dropdown-toggle::after {
-            content: "-";
+            @include media-breakpoint-up(lg) {
+              content: "-";
+            }
+          }
 
+          .toggle-arrow::after {
             @include media-breakpoint-down(lg) {
+              height: 48px;
+              width: 45px;
+              line-height: 48px;
+              background-color: #dddddd;
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              font-size: 18px;
               content: "\f106";
+              right: 0;
+              top: 0;
+              text-align: center;
             }
           }
         }

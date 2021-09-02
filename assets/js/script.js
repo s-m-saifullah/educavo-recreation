@@ -1,5 +1,14 @@
 $(function($){
 
+
+    // Nav arrow toggole on smaller and medium devices
+
+    if ($(window).width()<992) {
+        $('.nav-item').on('click', function(){
+            $('.dropdown-toggle').toggleClass("toggle-arrow"); 
+        });
+    }
+
     $('.search').on('click', function(){
         $('.search_overlay').show();
     })
@@ -89,3 +98,5 @@ $(function($){
     });
     
 })
+
+
