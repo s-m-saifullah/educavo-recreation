@@ -1,5 +1,18 @@
 $(function($){
 
+    // Sticky menu
+    $(window).on('scroll', function(){
+        if ($(this).scrollTop() > 1) {
+            $('.header').addClass('menufix');
+            $('.logo').css('display','none');
+            $('.sticky-logo').css('display','block');
+        } else {
+            $('.header').removeClass('menufix');
+            $('.logo').css('display','block');
+            $('.sticky-logo').css('display','none');
+        }
+        
+    })
 
     // Nav arrow toggole on smaller and medium devices
 
@@ -97,6 +110,22 @@ $(function($){
         ]
     });
     
+
+    // Back to Top
+
+    $(window).on('scroll', function(){
+        if ($(this).scrollTop() > 400) {
+            $('.b2t').fadeIn('slow');
+        } else {
+            $('.b2t').fadeOut('slow');
+        }
+    });
+
+    $('.b2t').on('click', function(){
+        $('html, body').animate({
+            scrollTop : 0,
+        }, 1000)
+    });
 })
 
 

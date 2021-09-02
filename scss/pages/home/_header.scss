@@ -5,13 +5,18 @@
 .header {
   height: 120px;
   position: relative;
-  z-index: 3;
+  z-index: 999;
   background-color: transparent;
-  .logo {
+  .logo,
+  .sticky-logo {
     width: 165px;
   }
 
   .navbar {
+    .navbar-brand {
+      @include media-breakpoint-down(lg) {
+      }
+    }
     .navbar-toggler {
       background-color: rgba($white, 0.7);
       box-shadow: none;
@@ -232,6 +237,37 @@
       opacity: 0;
       visibility: hidden;
       margin-top: initial;
+    }
+  }
+}
+
+.menufix {
+  height: 100px;
+  position: fixed;
+  background-color: $white;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+
+  @include media-breakpoint-down(lg) {
+    height: 70px;
+  }
+
+  .nav-item {
+    @include media-breakpoint-up(lg) {
+      padding: 25px 0 !important;
+    }
+    .nav-link {
+      @include media-breakpoint-up(lg) {
+        color: #111111 !important;
+      }
+    }
+  }
+
+  .header-right {
+    i {
+      color: #111111;
     }
   }
 }
